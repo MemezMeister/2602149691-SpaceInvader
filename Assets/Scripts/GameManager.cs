@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement; // For scene management
+using UnityEngine.SceneManagement; 
 using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
@@ -8,17 +8,17 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public GameObject enemyPrefab;
-    public GameObject playerPrefab; // Reference to the player prefab
-    public Transform spawnPoint; // Use a single spawn point for the starting position
-    public TMP_Text healthText; // Use TMP_Text for TextMeshPro
-    public TMP_Text gameOverText; // Reference to the game over text
-    public GameObject restartButton; // Reference to the restart button
+    public GameObject playerPrefab; 
+    public Transform spawnPoint; 
+    public TMP_Text healthText;
+    public TMP_Text gameOverText; 
+    public GameObject restartButton; 
     private List<Enemy> enemies = new List<Enemy>();
     public int rows = 5;
     public int columns = 10;
-    public float baseSpacing = 0.95f; // Base spacing
+    public float baseSpacing = 0.95f; 
     private bool movingRight = true;
-    public float moveDownAmount = 0.5f; // Amount to move down when changing direction
+    public float moveDownAmount = 0.5f; 
 
     void Awake()
     {
